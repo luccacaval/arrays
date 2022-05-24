@@ -50,14 +50,7 @@ int main(void) {
     "12 de copas"
   };
   int control_repetidas[40];
-  for (int i = 0; i < 40; i++) {
-    control_repetidas[i] = 0;
-  }
-  char * mano[3] = {
-    "n",
-    "n",
-    "n"
-  };
+  char * mano[3];
   for (int i = 0; i < 3; i++) {
     carta = rand() % 41;
     if (control_repetidas[carta] != 0) {
@@ -69,4 +62,5 @@ int main(void) {
   for (int i = 0; i < 3; i++) {
     printf("%s\n", mano[i]);
   }
+  return 0
 }
